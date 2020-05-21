@@ -1,0 +1,64 @@
+[eths]
+default = http://repo.gem5.org/gem5-stable
+[extensions]
+hgext.mq =
+
+[ui]
+# Set the username you will commit code with
+username=Tongxins <444805061@qq.com>
+ssh = ssh -C
+# Always use git diffs since they contain permission changes and rename info
+[defaults]
+qrefresh = --git
+email = --git
+diff = --git
+[extensions]
+# These are various extensions we find useful
+# Mercurial Queues -- allows managing of changes as a series of patches
+hgext.mq =
+# PatchBomb -- send a series of changesets as e-mailed patches
+hgext.patchbomb =
+# External Diff tool (e.g. kdiff3, meld, vimdiff, etc)
+hgext.extdiff =
+# Fetch allows for a pull/update operation to be done with one command and automatically commits a merge changeset
+hgext.fetch =
+# Path to the style file for the M5 repository
+# This file enforces our coding style requirements
+#style = /home/sim/src/gem5-master/util/style.py
+#[extensions]
+style = /home/server2/stx-gem/gem5-11688/util/style.py
+[email]
+method = smtp
+from = Tongxins <444805061@qq.com>
+[smtp]
+host = your.smtp.server.here
+
+# The following lines were automatically added by gem5/SConstruct
+# to provide the gem5 style-checking hooks
+
+#[hooks]
+#pretxncommit.style = python:style.check_style
+#pre-qrefresh.style = python:style.check_style
+# End of SConstruct additions
+
+
+# The following lines were automatically added by gem5/SConstruct
+# to provide the gem5 style-checking hooks
+[extensions]
+style = /home/server2/stx-gem/gem5-11688/util/style.py
+
+[hooks]
+pretxncommit.style = python:style.check_style
+pre-qrefresh.style = python:style.check_style
+# End of SConstruct additions
+
+
+# The following lines were automatically added by gem5/SConstruct
+# to provide the gem5 style-checking hooks
+[extensions]
+style = /home/server2/stx-gem/gem5-11688/util/style.py
+
+[hooks]
+pretxncommit.style = python:style.check_style
+pre-qrefresh.style = python:style.check_style
+
